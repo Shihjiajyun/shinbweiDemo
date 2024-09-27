@@ -1,5 +1,5 @@
 *{
-  font-family: "Poetsen One", sans-serif;
+  font-family: 'Noto Serif TC', serif;
 }
 
 body {
@@ -10,15 +10,16 @@ body {
 
 h2 {
   text-align: center;
+  font-size: 40px;
 }
 
 /* ****************navbar**************** */
 .hero-background {
-  background-image: url('./img/banner.png');
+  background-image: url('./img/banner.jpg');
   background-size: cover;
   background-position: center;
   color: white;
-  height: 700px;
+  height: 100vh;
   padding: 10px 0;
 }
 
@@ -40,7 +41,151 @@ h2 {
   color: #29201b;
 }
 
+.nav-item{
+  font-weight: 800;
+  font-size: 20px;
+}
+.shopping-cart-icon {
+  font-size: 1.5rem;
+}
 
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart-item .item-info {
+  flex-grow: 1;
+}
+
+.cart-item .item-remove {
+  cursor: pointer;
+  color: red;
+  font-size: 0.9rem;
+}
+
+.shopping-cart-icon .cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.dropdown-menu .btn{
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+}
+
+/* *******************懸浮購物車**************** */
+.floating-cart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.floating-cart .cart-toggle {
+  font-size: 24px;
+  color: #000;
+}
+
+.cart-content {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: none;
+  max-height: 80vh;
+  /* 確保購物車內容不會超出螢幕 */
+  overflow-y: auto;
+  /* 當內容超出時添加滾動條 */
+}
+
+.cart-content .cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-content .cart-item img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.cart-content .item-info {
+  flex-grow: 1;
+}
+
+.cart-content .item-remove {
+  cursor: pointer;
+  color: red;
+}
+
+.cart-content .btn {
+  display: block;
+  text-align: center;
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+}
+
+.floating-cart .cart-toggle .cart-count {
+  position: absolute;
+  top: -15px;
+  right: -19px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.floating-cart {
+  visibility: hidden;
+}
+
+@media (max-width: 992px) {
+  .floating-cart {
+    visibility: visible;
+  }
+
+  .nav-item .shopping-cart-icon {
+    visibility: hidden;
+  }
+}
 /* ****************介紹區塊**************** */
 .navbar {
   position: fixed;
@@ -55,22 +200,25 @@ h2 {
 }
 
 .hero-content h1 {
-  font-size: 4em;
+  font-size: 3em;
   color: #6c584c;
+  
 }
 
 .hero-content h2 {
   font-weight: 100;
   color: #6c584c;
-  font-size: 3em;
+  font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 20px;
 } 
 
 .btn-outline-light {
   color: white;
   border-color: white;
   margin: 20px;
+  
 }
 
 .btn-outline-light:hover {
@@ -94,6 +242,9 @@ h2 {
 .swiper-container {
   width: 90%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .swiper-slide {
@@ -102,6 +253,7 @@ h2 {
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .swiper-button-next,
@@ -130,11 +282,11 @@ h2 {
 }
 
 .card {
-  border: 1px solid #6c584c;
   border-radius: 5px;
   overflow: hidden;
   text-align: center;
   background-color: #e3d5ca;
+  height: auto;
 }
 
 .card-img-top {
@@ -147,7 +299,7 @@ h2 {
 }
 
 .card-title {
-  font-size: 1.2em;
+  font-size: 0.8em;
   margin-bottom: 10px;
   font-weight: bolder;
   color: #6c584c;
@@ -170,7 +322,54 @@ h2 {
   background-color: #f0ead2;
   border-color: #e3d5ca;
 }
+/* ******************品牌故事**************** */
+#story h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
 
+#story p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#story img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#story img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+@media (max-width: 768px) {
+  #story img {
+      margin-bottom: 30px; 
+  }
+
+  #story h2 {
+      font-size: 2rem;
+  }
+
+  #story p {
+      font-size: 1rem;
+      margin-bottom: 20px; 
+  }
+}
+/* ******************顧客評價**************** */
+#testimonials{
+  background-color: #e3d5ca;
+}
+
+#contact .btn {
+  background-color: #e3d5ca;
+  color: #6c584c;
+}
+
+#testimonials p{
+  font-size: 20px;
+}
 /* ******************回到頂部**************** */
 .back-to-top {
   position: fixed;
