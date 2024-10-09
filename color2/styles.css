@@ -1,7 +1,6 @@
 * {
   font-family: 'Noto Serif TC', serif;
-  color: #000000 !important; 
-  /* 字體顏色 */
+  color: #000000 !important;
 }
 
 body {
@@ -17,8 +16,8 @@ h2 {
 
 .btn {
   background-color: #2A3B47 !important;
-  color: #000000 !important;
-  border: none  !important;
+  color: white !important;
+  border: none !important;
 }
 
 .btn:hover {
@@ -26,11 +25,11 @@ h2 {
   /* border-color: #2A3B47 !important; */
 }
 
-#content{
+#content {
   background-color: #F9F8F2;
 }
 
-.card{
+.card {
   background-color: #B0B0B0 !important;
 }
 
@@ -45,7 +44,8 @@ h2 {
 }
 
 .navbar {
-  background-color: rgba(203, 161, 53, 0.8); /* 使用 #CBA135 的 RGB 值並設置透明度為 0.8 */
+  background-color: rgba(203, 161, 53, 0.8);
+  /* 使用 #CBA135 的 RGB 值並設置透明度為 0.8 */
 }
 
 
