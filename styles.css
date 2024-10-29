@@ -1,6 +1,5 @@
-* {
+*{
   font-family: 'Noto Serif TC', serif;
-  color: #003249 !important; 
 }
 
 body {
@@ -14,21 +13,6 @@ h2 {
   font-size: 40px;
 }
 
-.btn {
-  background-color: #80CED7 !important;
-  color: #003249 !important;
-  /* border: none  !important; */
-}
-
-.btn:hover {
-  background-color: #b0e2e7 !important;
-  border-color: #003249 !important;
-}
-
-#content{
-  background-color: #F9F8F2;
-}
-
 /* ****************navbar**************** */
 .hero-background {
   background-image: url('./img/banner.jpg');
@@ -40,10 +24,9 @@ h2 {
 }
 
 .navbar {
-  background-color: rgba(0, 126, 167, 0.8);
-  /* 最後一個值為透明度，範圍是0到1 */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 使導覽列半透明 */
 }
-
 
 .navbar .nav-link {
   color: white;
@@ -58,11 +41,10 @@ h2 {
   color: #29201b;
 }
 
-.nav-item {
+.nav-item{
   font-weight: 800;
   font-size: 20px;
 }
-
 .shopping-cart-icon {
   font-size: 1.5rem;
 }
@@ -97,7 +79,7 @@ h2 {
   top: -10px;
   right: -10px;
   background-color: red;
-  color: white !important;
+  color: white;
   border-radius: 50%;
   padding: 5px 10px;
   font-size: 12px;
@@ -105,7 +87,7 @@ h2 {
   line-height: 1;
 }
 
-.dropdown-menu .btn {
+.dropdown-menu .btn{
   background-color: #ff5733;
   color: #fff;
   border: none;
@@ -183,7 +165,7 @@ h2 {
   top: -15px;
   right: -19px;
   background-color: red;
-  color: white !important;
+  color: white;
   border-radius: 50%;
   padding: 5px 10px;
   font-size: 12px;
@@ -204,14 +186,13 @@ h2 {
     visibility: hidden;
   }
 }
-
 /* ****************介紹區塊**************** */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 999; 
 }
 
 .hero-content {
@@ -221,7 +202,7 @@ h2 {
 .hero-content h1 {
   font-size: 3em;
   color: #6c584c;
-
+  
 }
 
 .hero-content h2 {
@@ -231,13 +212,13 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
-}
+} 
 
 .btn-outline-light {
   color: white;
   border-color: white;
   margin: 20px;
-
+  
 }
 
 .btn-outline-light:hover {
@@ -245,13 +226,11 @@ h2 {
   background-color: white;
   border-color: white;
 }
-
 @media screen and (max-width: 862px) {
   .hero-content h1 {
     font-size: 7vw;
   }
 }
-
 /* ****************精選商品**************** */
 
 .carousel-container {
@@ -293,9 +272,7 @@ h2 {
 .swiper-button-next {
   right: 20px;
 }
-
-.first h2,
-p {
+.first h2,p {
   color: #6c584c;
 }
 
@@ -345,7 +322,6 @@ p {
   background-color: #f0ead2;
   border-color: #e3d5ca;
 }
-
 /* ******************品牌故事**************** */
 #story h2 {
   font-size: 2.5rem;
@@ -362,29 +338,27 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 #story img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 @media (max-width: 768px) {
   #story img {
-    margin-bottom: 30px;
+      margin-bottom: 30px; 
   }
 
   #story h2 {
-    font-size: 2rem;
+      font-size: 2rem;
   }
 
   #story p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+      font-size: 1rem;
+      margin-bottom: 20px; 
   }
 }
-
 /* ******************顧客評價**************** */
-#testimonials {
+#testimonials{
   background-color: #e3d5ca;
 }
 
@@ -393,10 +367,9 @@ p {
   color: #6c584c;
 }
 
-#testimonials p {
+#testimonials p{
   font-size: 20px;
 }
-
 /* ******************回到頂部**************** */
 .back-to-top {
   position: fixed;
